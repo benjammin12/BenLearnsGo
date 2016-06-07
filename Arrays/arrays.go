@@ -22,4 +22,8 @@ func main() {
 	sly = append(sly, ds...) //appends the entire ds to the end of sly
 	fmt.Println(sly)
 
+	fmt.Println(sly[:2])
+	fmt.Println(sly[2:len(sly)])
+	fmt.Println(len(sly))
+
 }

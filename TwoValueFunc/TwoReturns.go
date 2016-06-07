@@ -1,11 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
 	fmt.Println(returnTwo(12))
 	fmt.Println(isEvenOrOdd(14))
-
+	rand.Seed(int64(time.Now().Nanosecond()))
+	// Random int will be different each program execution.
+	value := rand.Int()
+	fmt.Println(value)
 }
 
 //functions in go can return two Values
