@@ -24,6 +24,7 @@ func main() {
 
 	fmt.Println(sly[:2])
 	fmt.Println(sly[2:len(sly)])
+	fmt.Println(sly[:5])
 	fmt.Println(len(sly))
 
 }
