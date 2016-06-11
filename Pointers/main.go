@@ -19,3 +19,29 @@ func main() {
 	//*z follows z to its memory adress and changes it
 	fmt.Println(x)
 }
+
+func square(x *float64) {
+	*x = *x * *x //multiplies your value of x in main function
+}
+
+func swap(y, z *int) {
+	temp := *y
+	*y = *z
+	*z = temp
+
+	// or ----- *y , *z = *z, *y
+}
+
+func rotate(args ...*int) {
+	if len(args) == 0 {
+		return
+	}
+
+	tmp := *args[0]
+
+	for i := 0; i < len(args)-1; i++ {
+
+		*args[i] = *args[i+1]
+	}
+	*args[len(args)-1] = tmp
+}

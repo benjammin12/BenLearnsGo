@@ -5,6 +5,8 @@ import "fmt"
 func main() {
 
 	rect1 := Rectangle{4, 5} //create a Rectangle object called rect1
+	// or var Rectangle rect1
+	// or rec1 := new(Rectangle)
 	square1 := Square{8}
 	fmt.Println("Rectange area is", getArea(rect1))
 	fmt.Println("Square area is", getArea(square1))
