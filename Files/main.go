@@ -8,8 +8,16 @@ import (
 )
 
 func main() {
-	f, err := os.Open("test1.txt") //os.Open returns an associated file and an error
-	if err != nil {                //standard error handling function, can usually get by using this
+	/*
+		fmt.Print("Enter file name: ") //stores file name into a variable
+		var fileName string
+		fmt.Scanln(&fileName)
+
+		f, err := os.Open(fileName) //os.Open returns an associated file and an error
+	*/
+
+	f, err := os.Open(os.Args[1])
+	if err != nil { //standard error handling function, can usually get by using this
 		log.Fatalln("File doesn't exist", err.Error())
 	} //if there is no error, then you can use the open file
 
