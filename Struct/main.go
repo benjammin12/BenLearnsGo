@@ -15,9 +15,23 @@ func main() {
 
 }
 
+//AreaOfShape gets area of your shape
+type AreaOfShape interface {
+	area() int
+}
+
 //Rectangle x,y
 type Rectangle struct { //create a struct with 2 variables representings sides of rect
 	x, y int
+}
+
+//Triangle that takes with base and height
+type Triangle struct {
+	base, height float64
+}
+
+func (tri Triangle) area() float64 { //method
+	return (1 / 2) * tri.base * tri.height
 }
 
 func (rect Rectangle) area() int { //METHOD that calculates area
@@ -26,4 +40,8 @@ func (rect Rectangle) area() int { //METHOD that calculates area
 	// then any modification of rect.x or rect.y inside the function will change the Rectangle
 	//object we created as well
 	return rect.x * rect.y
+}
+
+func getArea(sh AreaOfShape) int { //function
+	return sh.area()
 }
